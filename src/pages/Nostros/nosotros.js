@@ -13,7 +13,6 @@ import Pastelillos from '../../assets/img/pastelillos.jpg'
 export const nosotros = () => {
   return (
     <div>
-      <Header></Header>
       <div className='nosotros'>
         <div className='quienesSomos'>
           <img src={logo} alt="Logo" className='doggiftLogo'></img>
@@ -53,7 +52,6 @@ export const nosotros = () => {
             </div>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 };
