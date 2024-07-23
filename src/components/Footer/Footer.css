@@ -1,0 +1,17 @@
+.footer {
+    background-color: #ff7043; /* Color naranja */
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer div {
+    margin-top: 10px;
+  }
+  
+  .footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,103 @@
+.nosotros {
+    padding: 10px;
+
+    width: 50%;
+    margin: auto;
+}
+
+/* #1 ¿Quiénes somos? */
+.doggiftLogo {
+    width: 300px;
+
+    display: block;
+    margin: auto;
+}
+
+.quienesSomos h2 {
+    display: block;
+    text-align: center;
+}
+
+.quienesSomos p {
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+.tienda {
+    display: block;
+    margin: auto;
+    width: 500px;
+
+    margin-top: 30px;
+}
+
+/* #2 Calidad */
+.calidad {
+    margin-top: 70px;
+}
+
+.calidadLogo {
+    margin-top: 100px;
+    width: 120px;
+
+    display: block;
+    margin: auto;
+}
+
+.calidad h2 {
+    display: block;
+    
+    text-align: center;
+}
+
+.calidad p {
+    text-align: center;
+    
+    margin: auto;
+
+    max-width: 600px;
+    min-width: 400px;
+}
+
+/* #3 Alimentación y salud */
+.alimentacionSalud {
+    margin-top: 70px;
+}
+
+.alimentacionLogo {
+    display: block;
+    margin: auto;
+
+    width: 220px;
+}
+
+.alimentacionSalud h2 {
+    display: block;
+    
+    text-align: center;
+}
+
+.alimentacionSalud p {
+    text-align: center;
+
+    margin: auto;
+
+    max-width: 600px;
+    min-width: 400px;
+}
+.fotos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.empanadas {
+    width: 300px;
+}
+.pastelillos {
+    
+    width: 300px;
+}

@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import ProductDetail from './pages/Detalles/detalle_productos';'./pages/Detalles/detalle_productos'
+import ProductShowcase from './pages/Tienda/ProductShowcase';
+import Nosotros from './pages/Nostros/nosotros';
 
 function App() {
   return (
     <main>
-      <ProductDetail />
+      <ProductShowcase></ProductShowcase>
     </main>
   );
 }
