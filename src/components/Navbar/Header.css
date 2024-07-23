@@ -1,0 +1,27 @@
+.header {
+    background-color: #ff7043; /* Color naranja */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header nav ul button {
+    cursor: pointer;
+    border: transparent;
+    background-color: transparent;
+  }
+  
