@@ -1,34 +1,29 @@
-import React, { useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import DetalleProducto from './pages/Detalles/detalle_productos';
-import Tienda from './pages/Tienda/Tienda';
-import Carrito from './pages/Tienda/Carrito';
-import Facturacion from './pages/Tienda/Facturacion';
+import ProductDetail from './pages/Detalles/detalle_productos';
 
 function App() {
-    const [route, setRoute] = useState('/');
-    const [selectedProduct, setSelectedProduct] = useState(null);
-    const [total, setTotal] = useState(0);
-
-    const renderPage = () => {
-        switch (route) {
-            case '/':
-                return <Tienda onProductSelect={(product) => { setSelectedProduct(product); setRoute(`/detalle/${product.id}`); }} />;
-            case '/detalle':
-                return <DetalleProducto product={selectedProduct} />;
-            case '/facturacion':
-                return <Facturacion total={total} />;
-            default:
-                return <Tienda onProductSelect={(product) => { setSelectedProduct(product); setRoute(`/detalle/${product.id}`); }} />;
-        }
-    };
-
-    return (
-        <main>
-            <Carrito setTotal={setTotal} />
-            {renderPage()}
-        </main>
-    );
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+      <main>
+          <ProductDetail/>
+      </main>
+    </div>
+  );
 }
 
 export default App;
