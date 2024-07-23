@@ -1,12 +1,13 @@
-import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import ProductDetail from './pages/Detalles/detalle_productos';'./pages/Detalles/detalle_productos'
+import ProductDetail from './pages/Detalles/detalle_productos';
+import ProductShowcase from './pages/Tienda/ProductShowcase';
 
 function App() {
   return (
-    <main>
-      <ProductDetail />
-    </main>
+    <div className="App">
+      <ProductShowcase></ProductShowcase>
+    </div>
   );
 }
 
