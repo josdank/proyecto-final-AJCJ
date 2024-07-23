@@ -20,15 +20,23 @@ const ProductDetail = () => {
       </div>
       <div className="product-details-container">
         <h1 className="product-title">Comida saludable para mascotas</h1>
-        <p className="product-price">${(unitPrice * quantity).toFixed(2)}</p>
+        <p className="product-price"> <strong>Precio:</strong> ${(unitPrice * quantity).toFixed(2)}</p>
         <div className="quantity-container">
           <button className="quantity-button" onClick={decrementQuantity}>-</button>
           <span className="quantity-display">{quantity}</span>
           <button className="quantity-button" onClick={incrementQuantity}>+</button>
         </div>
         <p className="product-description">
-          Una alternativa a las croquetas y premios saludables, postres y pasteles para mascotas.
-          Una nueva forma de amar a tu mascota a través de la comida.
+
+          <h1>Descripcion</h1>
+          Una alternativa a las croquetas son premios saludables, postres y pasteles para mascotas.
+          Una nueva forma de amar a tu mascota a través de la comida.<br></br><br></br>
+
+          <strong>Tipo mascota:</strong> Perro. <br></br>
+          <strong>Tipo Alimento:</strong> Comida Humeda.<br></br>
+          <strong>Edad mascota:</strong> Cachorro. <br></br>
+          <strong>Formato:</strong> Tubo de 30g. <br></br>
+          <strong>Ingredientes:</strong> Pollo, arveja, saborisantes naturales, vitamina y carne.
         </p>
         <button className="add-to-cart-button">Add to bag</button>
       </div>

@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import ProductShowcase from './pages/Tienda/ProductShowcase';
-import Nosotros from './pages/Nostros/nosotros';
+import ProductDetail from './pages/Detalles/detalle_productos';'./pages/Detalles/detalle_productos'
 
 function App() {
   return (
     <main>
-      <ProductShowcase></ProductShowcase>
+      <ProductDetail />
     </main>
   );
 }
