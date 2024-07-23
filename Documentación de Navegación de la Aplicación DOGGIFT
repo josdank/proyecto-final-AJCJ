@@ -1,0 +1,30 @@
+Documentación de Navegación de la Aplicación DOGGIFT
+Páginas
+Carro de Compra
+
+Descripción: Esta página muestra todos los productos que un usuario ha añadido a su carrito de compras. Los usuarios pueden ver los detalles de cada producto, ajustar la cantidad deseada y ver un resumen del total de la compra. También pueden proceder al proceso de pago desde aquí.
+Detalles Relevantes:
+Los productos en el carrito se pueden actualizar o eliminar.
+Se debe ofrecer un resumen claro del costo total y cualquier posible descuento.
+La información del carrito se mantiene en un estado que puede ser compartido entre diferentes partes de la aplicación.
+Tienda
+
+Descripción: La página principal de la tienda lista todos los productos disponibles para la compra. Los usuarios pueden explorar los productos, aplicar filtros por categorías, precios u otras características, y buscar productos específicos.
+Detalles Relevantes:
+Debe incluir opciones para filtrar y ordenar los productos.
+La lista de productos puede estar paginada o cargarse de manera dinámica a medida que el usuario desplaza la página.
+Es importante proporcionar una experiencia de búsqueda efectiva para que los usuarios encuentren fácilmente lo que buscan.
+Detalle de Producto
+
+Descripción: En esta página se muestra información detallada sobre un producto específico. Incluye imágenes, descripciones completas, características y opciones para agregar el producto al carrito de compras.
+Detalles Relevantes:
+El detalle del producto se debe cargar dinámicamente en función del producto seleccionado.
+Debe haber un botón claro para añadir el producto al carrito.
+Proporciona información completa y atractiva para ayudar a los usuarios a tomar decisiones de compra informadas.
+Navegación entre Páginas
+Transición entre páginas: Los usuarios pueden navegar entre las páginas mediante enlaces o botones disponibles en cada vista. Por ejemplo, un enlace en la página de la tienda puede llevar a la página de detalles de un producto, y un botón en la página de detalles puede añadir el producto al carrito y redirigir a la página del carrito.
+Estado y datos: Los datos necesarios para las diferentes páginas (como el contenido del carrito o los detalles del producto) deben gestionarse de manera eficiente para asegurar que la información esté actualizada y disponible en las distintas vistas de la aplicación.
+Consideraciones Adicionales
+Usabilidad: Asegúrate de que la navegación sea intuitiva y que los usuarios puedan moverse fácilmente entre las páginas.
+Experiencia del usuario: Las páginas deben cargarse rápidamente y proporcionar una experiencia de usuario fluida. Considera el uso de técnicas de carga perezosa para mejorar el rendimiento.
+Gestión de estado: Si la aplicación crece, es crucial gestionar el estado global de manera eficiente para mantener la consistencia en la información presentada en diferentes partes de la aplicación.
