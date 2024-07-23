@@ -3,10 +3,10 @@ import React from 'react';
 const Producto = ({ producto, agregarAlCarrito }) => {
     return (
         <div className="producto">
-            <img src={producto.image} alt={producto.name} />
-            <h3>{producto.name}</h3>
-            <p>${producto.price.toFixed(2)} c/u</p>
-            <button onClick={() => agregarAlCarrito(producto)}>Añadir al Carrito</button>
+            <img src={producto.src} alt={producto.name} />
+            <h2>{producto.name}</h2>
+            <p>${producto.price.toFixed(2)}</p>
+            <button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
         </div>
     );
 };
