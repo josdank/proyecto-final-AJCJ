@@ -1,29 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Tienda from './pages/Tienda/Tienda';
 import ProductDetail from './pages/Detalles/detalle_productos';
+import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <main>
-          <ProductDetail/>
-      </main>
-    </div>
-  );
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const handleProductSelect = (product) => {
+        setSelectedProduct(product);
+    };
+
+    const handleBackToStore = () => {
+        setSelectedProduct(null);
+    };
+
+    return (
+        <div className="App">
+            {selectedProduct ? (
+                <div>
+                    <button onClick={handleBackToStore}>Volver a la tienda</button>
+                    <ProductDetail product={selectedProduct} />
+                </div>
+            ) : (
+                <Tienda onProductSelect={handleProductSelect} />
+            )}
+        </div>
+    );
 }
 
 export default App;

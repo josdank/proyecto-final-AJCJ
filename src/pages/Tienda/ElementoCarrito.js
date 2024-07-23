@@ -1,11 +1,14 @@
 import React from 'react';
 
-const ElementoCarrito = ({ item, eliminarDelCarrito }) => {
+const ElementoCarrito = ({ producto, eliminarDelCarrito }) => {
     return (
-        <div className="elemento-carrito">
-            <h4>{item.name}</h4>
-            <p>${item.price.toFixed(2)} c/u</p>
-            <button onClick={() => eliminarDelCarrito(item)}>Eliminar</button>
+        <div className="producto-carrito">
+            <img src={producto.src} alt={producto.name} />
+            <h3>{producto.name}</h3>
+            <p>Precio: ${producto.price.toFixed(2)}</p>
+            <p>Cantidad: {producto.cantidad}</p>
+            <p>Total: ${(producto.price * producto.cantidad).toFixed(2)}</p>
+            <button onClick={() => eliminarDelCarrito(producto.id)}>Eliminar</button>
         </div>
     );
 };

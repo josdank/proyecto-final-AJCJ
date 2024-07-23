@@ -16,8 +16,9 @@ const Carrito = ({ itemsCarrito = [], eliminarDelCarrito, onCheckout, visible, s
 
     const handleEnviar = () => {
         if (onCheckout) {
-            onCheckout(total);
+            onCheckout(total); // Llama a la función de checkout con el total
         }
+        setVisible(false); // Cierra el carrito después del checkout
     };
 
     return (
@@ -34,15 +35,12 @@ const Carrito = ({ itemsCarrito = [], eliminarDelCarrito, onCheckout, visible, s
                         <p>El carrito está vacío</p>
                     ) : (
                         <div>
-                            {productosAgrupados.map((item, index) => (
-                                <div key={index} className="producto-carrito">
-                                    <img src={item.src} alt={item.name} />
-                                    <h3>{item.name}</h3>
-                                    <p>Precio: ${item.price.toFixed(2)}</p>
-                                    <p>Cantidad: {item.cantidad}</p>
-                                    <p>Total: ${(item.price * item.cantidad).toFixed(2)}</p>
-                                    <button onClick={() => eliminarDelCarrito(item.id)}>Eliminar</button>
-                                </div>
+                            {productosAgrupados.map((item) => (
+                                <ElementoCarrito
+                                    key={item.id}
+                                    producto={item}
+                                    eliminarDelCarrito={eliminarDelCarrito}
+                                />
                             ))}
                             <h3>Total: ${total.toFixed(2)}</h3>
                             <button onClick={handleEnviar}>Enviar</button>
@@ -56,3 +54,4 @@ const Carrito = ({ itemsCarrito = [], eliminarDelCarrito, onCheckout, visible, s
 };
 
 export default Carrito;
+
