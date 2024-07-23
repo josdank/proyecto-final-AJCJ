@@ -25,7 +25,7 @@ const Carrito = ({ itemsCarrito = [], eliminarDelCarrito, onCheckout, visible, s
         <div>
             <div className="icono-carrito" onClick={() => setVisible(!visible)}>
                 🛒
-                {itemsCarrito.length > 0 && <span className="contador">{itemsCarrito.length}</span>}
+                {itemsCarrito.length > 0 && <span className="conta">{itemsCarrito.length}</span>}
             </div>
 
             {visible && (
