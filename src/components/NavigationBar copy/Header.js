@@ -1,8 +1,7 @@
 import React from 'react';
-import Estilos from '../../components/NavigationBar/estilos.css'
+import './estilo.css';
 import Logo from '../../assets/img/logoDoggift.png'
 import Icono from '../../assets/img/iconoDoggift.png'
-
 
 const Header = ({ onShowProductList, onShowNosotros }) => {
     return (

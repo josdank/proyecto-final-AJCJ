@@ -2,9 +2,8 @@ import React from 'react';
 import logo from '../../assets/img/logo.png';
 import calidad from '../../assets/img/calidadPNG.png'
 import salud from '../../assets/img/alimentacionSanaWEBP.png'
-import estilos from '../Nostros/nosotros.css'
-import Header from '../../components/Navbar/Header';
-import Footer from '../../components/Footer/Footer';
+
+import NosotrosEstilo from './nosotros.css'
 
 import Tienda from '../../assets/img/tienda.jpg'
 import Empanadas from '../../assets/img/Empanadas.jpg'

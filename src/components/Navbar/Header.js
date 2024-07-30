@@ -4,6 +4,7 @@ import './Header.css';
 const Header = ({ onShowProductList, onShowNosotros }) => {
     return (
         <header className="header">
+            {/*
             <div className='head'>
                 <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
                 <FontAwesomeIcon icon="fa-brands fa-tiktok" />
@@ -14,7 +15,7 @@ const Header = ({ onShowProductList, onShowNosotros }) => {
             <div className='navbar'>
 
             </div>
-            <script src="https://kit.fontawesome.com/3e22398672.js" crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/3e22398672.js" crossorigin="anonymous"></script>*/}
         </header>
     );
 };
