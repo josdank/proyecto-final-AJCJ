@@ -18,8 +18,11 @@
   height: 15px;
 }
 
+a {
+  text-decoration: none;
+}
 
-.head i {
+.head a {
   color: white;
 }
 
@@ -28,6 +31,7 @@
 
 
 /* -------------- BARRA DE NAVEGACIÓN -------------- */
+
 
 .header__navbar {
   background-color: rgb(245, 245, 245);
@@ -44,6 +48,7 @@
   height: 49.5px;
   align-items: center;
 
+  align-items: stretch;
 }
 
 .doggiftLogo {
@@ -65,12 +70,14 @@
 .header__navbar--opciones a {
   display: flex;
   align-items: center;
+  align-items: stretch;
 }
 
 .header__navbar--opciones .header__navbar--opciones--nombre {
   font-size: 12px;
   font-weight: 600;
   margin-left: 2px; 
+  margin: auto;
 }
 
 
@@ -90,7 +97,7 @@
   row-gap: 12px;
 }
 
-.header__navbar--busqueda i {
+.header__navbar--busqueda a {
   margin: 10px;
   align-items: center;
 }

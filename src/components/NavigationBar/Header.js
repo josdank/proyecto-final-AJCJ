@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../../assets/image/logoDoggift.png'
+import Logo from '../../assets/img/logoDoggift.png'
 import Icono from '../../assets/images/iconoDoggift.png'
 
 const Header = ({ onShowProductList, onShowNosotros }) => {
@@ -8,16 +8,18 @@ const Header = ({ onShowProductList, onShowNosotros }) => {
         <header className="header">
             <div className='header__background'>
                 <div className='head'>
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-tiktok"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href='https://twitter.com/' class="fa-brands fa-x-twitter"></a>
+                    <a href='https://www.google.com/' class="fa-brands fa-tiktok"></a>
+                    <a class="fa-brands fa-facebook"></a>
+                    <a class="fa-brands fa-instagram"></a>
                 </div>
             </div>
 
             <div className='header__navbar'>
                 <div className='navbar'>
-                    <img src={Logo} alt="Logo" className='doggiftLogo'></img>
+                    <a href='' className='logo'>
+                        <img src={Logo} alt="Logo" className='doggiftLogo'></img>
+                    </a>
                     <div className='header__navbar--opciones'>
                         <a>
                             <i class="fa-solid fa-house"></i>
@@ -44,10 +46,10 @@ const Header = ({ onShowProductList, onShowNosotros }) => {
                     <div className='header__navbar--busqueda'>
                         <div>
                             <div className='header__navbar--busqueda--lupa'>
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <a class="fa-solid fa-magnifying-glass"></a>
                                 <div className='linea'></div>
                             
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <a class="fa-solid fa-cart-shopping"></a>
                                 <div className='linea'></div>
                                 <div className='cantidades'>
                                     <div className='carrito_contador'>0.00</div>
