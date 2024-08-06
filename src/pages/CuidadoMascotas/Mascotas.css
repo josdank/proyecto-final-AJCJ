@@ -1,0 +1,73 @@
+.mascotas {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .seccion {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    color: white;
+  }
+  
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .parallax:nth-child(2) {
+    background-image: url('https://laredhispana.org/wp-content/uploads/2022/07/cuidado-de-mascotas-en-vacaciones.jpg');
+  }
+  
+  .parallax:nth-child(3) {
+    background-image: url('https://t1.ea.ltmcdn.com/es/posts/3/5/5/cuidados_basicos_de_las_mascotas_25553_orig.jpg');
+  }
+  
+  .parallax:nth-child(4) {
+    background-image: url('https://wakyma.com/blog/wp-content/uploads/2017/05/Consejos-clave-para-el-cuidado-de-aves');
+  }
+  
+  .texto {
+    position: relative;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .texto h2 {
+    margin-top: 0;
+  }
+  
+  .texto p {
+    margin: 10px 0;
+  }
+
+  .parallax {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .texto {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+  }
+  

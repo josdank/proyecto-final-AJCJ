@@ -5,7 +5,7 @@ import Nosotros from "./pages/Nostros/nosotros";
 import Header from './components/NavigationBar/Header'; // Asegúrate de que el Header esté correctamente importado
 import './App.css';
 import Footer from "./components/Footer/Footer";
-
+import Mascotas from './pages/CuidadoMascotas/Mascotas';
 const App = () => {
     const [view, setView] = useState('nosotros');
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -50,6 +50,7 @@ const App = () => {
         <div className="App">
             <Header onShowProductList={handleShowProductList} onShowNosotros={handleShowNosotros} />
             {content}
+            <Mascotas/>
             <Footer/>
         </div>
     );
