@@ -6,6 +6,7 @@ import Header from './components/NavigationBar/Header'; // Asegúrate de que el 
 import './App.css';
 import Footer from "./components/Footer/Footer";
 import Mascotas from './pages/CuidadoMascotas/Mascotas';
+import DetalleProductos from './pages/Detalles/detalle_productos';
 const App = () => {
     const [view, setView] = useState('nosotros');
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -51,6 +52,7 @@ const App = () => {
             <Header onShowProductList={handleShowProductList} onShowNosotros={handleShowNosotros} />
             {content}
             <Mascotas/>
+            <DetalleProductos/>
             <Footer/>
         </div>
     );
