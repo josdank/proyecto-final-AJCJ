@@ -163,3 +163,20 @@
 .product-item .price {
   color: #ff6f61; 
 }
+
+.product-page {
+  position: relative;
+  z-index: 1;
+}
+
+.product-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/img/patronFondoNosotrs.jpeg');
+  background-size: 50%;
+  background-repeat: repeat;
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
+}

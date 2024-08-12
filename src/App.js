@@ -7,6 +7,7 @@ import './App.css';
 import Footer from "./components/Footer/Footer";
 import Mascotas from './pages/CuidadoMascotas/Mascotas';
 import DetalleProductos from './pages/Detalles/detalle_productos';
+import Comida from './pages/ComidaDoggift/comida';
 import { FaHome } from 'react-icons/fa'; // Importamos el icono de la casita
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
             {content}
             <Mascotas />
             <DetalleProductos />
+            <Comida/>
             <Footer />
 
             {/* Icono de casita */}

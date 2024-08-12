@@ -1,5 +1,9 @@
 import React from 'react';
 import './About.css';
+import Calidad_Alta from '../../assets/img/1.jpg';
+import Ingrefientes_naturales from '../../assets/img/2.jpg';
+import Sabor from '../../assets/img/3.jpg';
+import Nutricion from '../../assets/img/4.jpg';
 
 const About = () => {
   return (
@@ -13,7 +17,7 @@ const About = () => {
       {/* Sección 1: Calidad Superior */}
       <section className="quality-section">
         <div className="section-content">
-          <img src="/images/1.jpg" alt="Calidad Superior" />
+          <img src={Calidad_Alta} alt="Calidad Superior" />
           <div className="text-content">
             <h2>Calidad Superior en Cada Bocado</h2>
             <p>
@@ -29,7 +33,7 @@ const About = () => {
       {/* Sección 2: Ingredientes Naturales */}
       <section className="natural-ingredients-section">
         <div className="section-content reverse">
-          <img src="/images/2.jpg" alt="Ingredientes Naturales" />
+          <img src={Ingrefientes_naturales} alt="Ingredientes Naturales" />
           <div className="text-content">
             <h2>Ingredientes Naturales</h2>
             <p>
@@ -45,7 +49,7 @@ const About = () => {
       {/* Sección 3: Sabor que Encanta */}
       <section className="taste-section">
         <div className="section-content">
-          <img src="/images/3.jpg" alt="Sabor Increíble" />
+          <img src={Sabor} alt="Sabor Increíble" />
           <div className="text-content">
             <h2>Sabor que Encanta</h2>
             <p>
@@ -61,7 +65,7 @@ const About = () => {
       {/* Sección 4: Nutrición Equilibrada */}
       <section className="balanced-nutrition-section">
         <div className="section-content reverse">
-          <img src="/images/4.jpg" alt="Nutrición Equilibrada" />
+          <img src={Nutricion} alt="Nutrición Equilibrada" />
           <div className="text-content">
             <h2>Nutrición Equilibrada</h2>
             <p>
