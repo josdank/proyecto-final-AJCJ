@@ -1,17 +1,108 @@
 .footer {
-    background-color: #ff7043; /* Color naranja */
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
-  
-  .footer div {
-    margin-top: 10px;
-  }
-  
-  .footer a {
-    color: white;
-    margin: 0 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    color: #fff;
     text-decoration: none;
-  }
-  
+    font-size: 24px;
+}
+
+.footer-social i {
+    font-size: 24px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: 1px solid #ecf2ff;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #e05a1c;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer-newsletter button:hover {
+    background-color: rgba(240, 128, 128, 0.47);
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-payment img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-payment {
+        margin-bottom: 10px;
+    }
+}

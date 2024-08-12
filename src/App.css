@@ -141,3 +141,21 @@ button:hover {
 .carrito button:hover {
   background-color: darkorange;
 }
+
+.home-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: rgba(253, 180, 159, 0.7);
+  border: none;
+  border-radius: 30%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(136, 48, 48, 0.2);
+  z-index: 1000;
+  font-size: 20px;
+}
+
+.home-icon:hover {
+  background-color: #e0e0e0;
+}

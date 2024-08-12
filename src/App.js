@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import Tienda from './pages/Tienda/Tienda';
 import ProductDetail from './pages/Detalles/detalle_productos';
 import Nosotros from "./pages/Nostros/nosotros";
-import Header from './components/NavigationBar/Header'; // Asegúrate de que el Header esté correctamente importado
+import Header from './components/NavigationBar/Header';
 import './App.css';
 import Footer from "./components/Footer/Footer";
 import Mascotas from './pages/CuidadoMascotas/Mascotas';
 import DetalleProductos from './pages/Detalles/detalle_productos';
+import { FaHome } from 'react-icons/fa'; // Importamos el icono de la casita
+
 const App = () => {
     const [view, setView] = useState('nosotros');
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -27,6 +29,10 @@ const App = () => {
 
     const handleShowNosotros = () => {
         setView('nosotros');
+    };
+
+    const handleGoHome = () => {
+        window.scrollTo(0, 0);
     };
 
     let content;
@@ -51,9 +57,14 @@ const App = () => {
         <div className="App">
             <Header onShowProductList={handleShowProductList} onShowNosotros={handleShowNosotros} />
             {content}
-            <Mascotas/>
-            <DetalleProductos/>
-            <Footer/>
+            <Mascotas />
+            <DetalleProductos />
+            <Footer />
+
+            {/* Icono de casita */}
+            <button onClick={handleGoHome} className="home-icon">
+                <FaHome />
+            </button>
         </div>
     );
 }
