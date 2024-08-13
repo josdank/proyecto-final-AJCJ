@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Tienda from './pages/Tienda/Tienda';
-import ProductDetail from './pages/Detalles/detalle_productos';
-import Nosotros from "./pages/Nostros/nosotros";
-import Header from './components/NavigationBar/Header';
-import './App.css';
-import Footer from "./components/Footer/Footer";
-import Mascotas from './pages/CuidadoMascotas/Mascotas';
 import DetalleProductos from './pages/Detalles/detalle_productos';
-import Comida from './pages/ComidaDoggift/comida';
+import Nosotros from "./pages/Nostros/nosotros";
+import Comida from "./pages/ComidaDoggift/comida";
+import Header from './components/NavigationBar/Header';
+import Footer from "./components/Footer/Footer";
+import './App.css';
+import Terms from './pages/Terms/Terms';
+import CookiesPolicy from './pages/CookiesPolicy/CookiesPolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import { FaHome } from 'react-icons/fa';
-import Carrito from "./pages/Tienda/Carrito"; // Importamos el icono de la casita
 
 const App = () => {
     const [view, setView] = useState('nosotros');
@@ -34,7 +34,20 @@ const App = () => {
     };
 
     const handleGoHome = () => {
+        setView('tienda');
         window.scrollTo(0, 0);
+    };
+
+    const handleShowTerms = () => {
+        setView('terms');
+    };
+
+    const handleShowCookiesPolicy = () => {
+        setView('cookies');
+    };
+
+    const handleShowPrivacyPolicy = () => {
+        setView('privacy');
     };
 
     let content;
@@ -44,12 +57,41 @@ const App = () => {
             content = (
                 <div>
                     <button onClick={handleBackToStore}>Volver a la tienda</button>
-                    <ProductDetail product={selectedProduct} />
+                    <DetalleProductos product={selectedProduct} />
                 </div>
             );
             break;
         case 'tienda':
-            content = <Tienda onProductSelect={handleProductSelect} />;
+            content = (
+                <div>
+                    <button onClick={handleBackToStore}>Volver al Home</button>
+                    <Tienda onProductSelect={handleProductSelect} />
+                </div>
+            );
+            break;
+        case 'terms':
+            content = (
+                <div>
+                    <Terms />
+                    <button onClick={handleGoHome}>Acepto los términos</button>
+                </div>
+            );
+            break;
+        case 'cookies':
+            content = (
+                <div>
+                    <CookiesPolicy />
+                    <button onClick={handleGoHome}>Acepto las políticas de cookies</button>
+                </div>
+            );
+            break;
+        case 'privacy':
+            content = (
+                <div>
+                    <PrivacyPolicy />
+                    <button onClick={handleGoHome}>Acepto la protección de datos</button>
+                </div>
+            );
             break;
         default:
             content = <Nosotros />;
@@ -57,16 +99,18 @@ const App = () => {
 
     return (
         <div className="App">
-            <Header onShowProductList={handleShowProductList} onShowNosotros={handleShowNosotros} />
+            <Header
+                onShowProductList={handleShowProductList}
+                onShowNosotros={handleShowNosotros}
+            />
             {content}
-            <DetalleProductos />
-            <Comida/>
-            <Tienda/>
-            <Footer />
-
-            {/* Icono de casita */}
+            <Footer
+                onShowTerms={handleShowTerms}
+                onShowCookiesPolicy={handleShowCookiesPolicy}
+                onShowPrivacyPolicy={handleShowPrivacyPolicy}
+            />
             <button onClick={handleGoHome} className="home-icon">
-                <FaHome />
+                <FaHome/>
             </button>
         </div>
     );

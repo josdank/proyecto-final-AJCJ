@@ -6,17 +6,17 @@ import VisaLogo from "../../assets/img/path-to-visa-logo.png";
 import MasterCardLogo from "../../assets/img/path-to-mastercard-logo.png";
 import PayPalLogo from "../../assets/img/path-to-paypal-logo.png";
 
-const Footer = () => {
+const Footer = ({ onShowTerms, onShowCookiesPolicy, onShowPrivacyPolicy }) => {
     return (
         <footer className="footer">
             <div className="footer-section logo">
-                <a href='' className='logo'>
+                <a href='#' className='logo'>
                     <img src={Logo} alt="Logo" className='doggiftLogo'></img>
                 </a>
                 <p>Comida saludable para mascotas, alternativa a las croquetas.</p>
                 <div className="footer-social">
-                    <a href="#whatsApp"><i className="fab fa-WhatApp"></i></a>
-                    <a href="#instagram"><i className="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/+5930960444123"><i className="fa fa-phone"></i></a>
+                    <a href="https://www.instagram.com/the_doggift/"><i className="fab fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -33,16 +33,16 @@ const Footer = () => {
 
             <div className="footer-section info">
                 <h4>Más información</h4>
-                <p><a href="#terms">Términos y condiciones</a></p>
-                <p><a href="#cookies">Políticas de cookies</a></p>
-                <p><a href="#privacy">Protección de datos</a></p>
+                <p><a href="#" onClick={onShowTerms}>Términos y condiciones</a></p>
+                <p><a href="#" onClick={onShowCookiesPolicy}>Políticas de cookies</a></p>
+                <p><a href="#" onClick={onShowPrivacyPolicy}>Protección de datos</a></p>
             </div>
 
             <div className="footer-section newsletter">
                 <h4>Boletín</h4>
                 <p>Ingrese su correo para suscribirse al boletín y recibir información.</p>
                 <form>
-                    <input type="email" placeholder="Correo" />
+                    <input type="email" placeholder="Correo" /><br></br>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -64,7 +64,6 @@ const Footer = () => {
                 </div>
                 <p>© 2024. All rights reserved.</p>
             </div>
-
         </footer>
     );
 };

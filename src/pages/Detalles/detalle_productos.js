@@ -11,6 +11,7 @@ import minipastel from "../../assets/img/mini-pastel.jpg";
 import pastelillos from "../../assets/img/pastelillos.jpg";
 import Galletas from "../../assets/img/galletas.jpg";
 
+
 const DetalleProductos = () => {
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(3.00);
