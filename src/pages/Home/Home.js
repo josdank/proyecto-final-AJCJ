@@ -132,17 +132,17 @@ const Home = () => {
         <h2 style={sectionTitleStyle}>Ofertas Especiales</h2>
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <img src="/images/3.jpg" alt="Comida Saludable para Mascotas" style={productImageStyle} />
+            <img src="https://recetasbarf.com/wp-content/uploads/2020/03/Preparaci%C3%B3n-de-la-comida-barf-para-perros-768x512.png" alt="Comida Saludable para Mascotas" style={productImageStyle} />
             <h3 style={productNameStyle}>Comida Saludable para Mascotas</h3>
             <p style={productPriceStyle}>Desde $15.99</p>
           </div>
           <div style={cardStyle}>
-            <img src="/images/4.jpg" alt="Snacks Naturales" style={productImageStyle} />
+            <img src="https://th.bing.com/th/id/OIP.a3-JcDBvjRjBM0eJ_F0TJAHaEK?w=322&h=181&c=7&r=0&o=5&pid=1.7" alt="Snacks Naturales" style={productImageStyle} />
             <h3 style={productNameStyle}>Snacks Naturales</h3>
             <p style={productPriceStyle}>Desde $9.99</p>
           </div>
           <div style={cardStyle}>
-            <img src="/images/1.jpg" alt="Juguetes para Mascotas" style={productImageStyle} />
+            <img src="https://th.bing.com/th/id/OIP.EprL-E5WlgaftbgX8jb9HQAAAA?w=180&h=180&c=7&r=0&o=5&pid=1.7" alt="Juguetes para Mascotas" style={productImageStyle} />
             <h3 style={productNameStyle}>Juguetes para Mascotas</h3>
             <p style={productPriceStyle}>Desde $12.99</p>
           </div>

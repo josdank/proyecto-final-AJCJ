@@ -18,20 +18,20 @@
 .navegacion-categorias ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
 
 /* Estilos para los ítems de la lista */
 .navegacion-categorias li {
-    font-size: 20px;
+    font-size: 4px;
     cursor: pointer;
     transition: color 0.3s;
     display: flex;
     align-items: center;
     margin: 0 10px;
-    padding: 5px 90px;
+    padding: 5px 80px;
 }
 
 .navegacion-categorias li svg {
@@ -56,7 +56,7 @@
     }
 
     .navegacion-categorias li {
-        font-size: 18px;
+        font-size: 15px;
         padding: 5px 20px;
     }
 }
@@ -75,7 +75,7 @@
     }
 
     .navegacion-categorias li {
-        font-size: 16px;
+        font-size: 15px;
         padding: 5px 10px;
     }
 }

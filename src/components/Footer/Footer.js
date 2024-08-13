@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 import Logo from "../../assets/img/logoDoggift.png";
 import AmexLogo from "../../assets/img/path-to-amex-logo.png";
@@ -6,7 +7,33 @@ import VisaLogo from "../../assets/img/path-to-visa-logo.png";
 import MasterCardLogo from "../../assets/img/path-to-mastercard-logo.png";
 import PayPalLogo from "../../assets/img/path-to-paypal-logo.png";
 
-const Footer = ({ onShowTerms, onShowCookiesPolicy, onShowPrivacyPolicy }) => {
+const Footer = () => {
+    const navigate = useNavigate();
+
+    const handleShowTerms = () => {
+        navigate('/terms');
+    };
+
+    const handleShowCookiesPolicy = () => {
+        navigate('/cookies');
+    };
+
+    const handleShowPrivacyPolicy = () => {
+        navigate('/privacy');
+    };
+
+    const handleAcceptTerms = () => {
+        navigate('/home');
+    };
+
+    const handleAcceptCookiesPolicy = () => {
+        navigate('/home');
+    };
+
+    const handleAcceptPrivacyPolicy = () => {
+        navigate('/home');
+    };
+
     return (
         <footer className="footer">
             <div className="footer-section logo">
@@ -33,9 +60,9 @@ const Footer = ({ onShowTerms, onShowCookiesPolicy, onShowPrivacyPolicy }) => {
 
             <div className="footer-section info">
                 <h4>Más información</h4>
-                <p><a href="#" onClick={onShowTerms}>Términos y condiciones</a></p>
-                <p><a href="#" onClick={onShowCookiesPolicy}>Políticas de cookies</a></p>
-                <p><a href="#" onClick={onShowPrivacyPolicy}>Protección de datos</a></p>
+                <p><a href="#" onClick={handleShowTerms}>Términos y condiciones</a></p>
+                <p><a href="#" onClick={handleShowCookiesPolicy}>Políticas de cookies</a></p>
+                <p><a href="#" onClick={handleShowPrivacyPolicy}>Protección de datos</a></p>
             </div>
 
             <div className="footer-section newsletter">

@@ -4,7 +4,7 @@ import './Terms.css';
 const Terms = () => {
         const handleAcceptTerms = () => {
                 // Redirige a la página principal
-                window.location.href = '/';
+                window.location.href = '/home';
         };
 
         return (

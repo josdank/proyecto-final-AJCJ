@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Tienda from './pages/Tienda/Tienda';
 import DetalleProductos from './pages/Detalles/detalle_productos';
 import Nosotros from "./pages/Nostros/nosotros";
@@ -40,7 +40,6 @@ const App = () => {
                     <Route path="/comida" element={<Comida />} />
                     <Route path="/mascotas" element={<Mascotas />} />
                     <Route path="/detalle/:id" element={<DetalleProductos />} />
-                    <Route path="/detalle_productos" component={DetalleProductos} />
                     <Route path="/terms" element={<Terms />} />
                     <Route path="/cookies" element={<CookiesPolicy />} />
                     <Route path="/privacy" element={<PrivacyPolicy />} />

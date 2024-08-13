@@ -4,7 +4,7 @@ import './CookiesPolicy.css';
 const CookiesPolicy = () => {
         const handleAcceptCookies = () => {
                 // Redirige a la página principal
-                window.location.href = '/';
+                window.location.href = '/home';
         };
 
         return (
