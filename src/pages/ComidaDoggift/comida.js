@@ -8,7 +8,7 @@ import Nutricion from '../../assets/img/4.jpg';
 const About = () => {
   // Función para redirigir a la página de la tienda
   const handleButtonClick = () => {
-    window.location.href = '../../pages/Tienda/Tienda';
+    window.location.href = 'src/pages/Tienda/Tienda.js';
   };
 
   return (

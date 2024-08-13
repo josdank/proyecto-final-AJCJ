@@ -34,8 +34,7 @@ const App = () => {
     };
 
     const handleGoHome = () => {
-        setView('tienda');
-        window.scrollTo(0, 0);
+        setView('home');
     };
 
     const handleShowTerms = () => {
@@ -50,67 +49,55 @@ const App = () => {
         setView('privacy');
     };
 
-    let content;
-
-    switch (view) {
-        case 'productDetail':
-            content = (
-                <div>
-                    <button onClick={handleBackToStore}>Volver a la tienda</button>
-                    <DetalleProductos product={selectedProduct} />
-                </div>
-            );
-            break;
-        case 'tienda':
-            content = (
-                <div>
-                    <button onClick={handleBackToStore}>Volver al Home</button>
-                    <Tienda onProductSelect={handleProductSelect} />
-                </div>
-            );
-            break;
-        case 'terms':
-            content = (
-                <div>
-                    <Terms />
-                    <button onClick={handleGoHome}>Acepto los términos</button>
-                </div>
-            );
-            break;
-        case 'cookies':
-            content = (
-                <div>
-                    <CookiesPolicy />
-                    <button onClick={handleGoHome}>Acepto las políticas de cookies</button>
-                </div>
-            );
-            break;
-        case 'privacy':
-            content = (
-                <div>
-                    <PrivacyPolicy />
-                    <button onClick={handleGoHome}>Acepto la protección de datos</button>
-                </div>
-            );
-            break;
-        default:
-            content = <Nosotros />;
-    }
+    const renderContent = () => {
+        switch (view) {
+            case 'productDetail':
+                return (
+                    <div>
+                        <button onClick={handleBackToStore}>Volver a la tienda</button>
+                        <DetalleProductos product={selectedProduct} />
+                    </div>
+                );
+            case 'tienda':
+                return <Tienda onProductSelect={handleProductSelect} />;
+            case 'terms':
+                return (
+                    <div>
+                        <Terms />
+                    </div>
+                );
+            case 'cookies':
+                return (
+                    <div>
+                        <CookiesPolicy />
+                    </div>
+                );
+            case 'privacy':
+                return (
+                    <div>
+                        <PrivacyPolicy />
+                    </div>
+                );
+            default:
+                return <Nosotros />;
+        }
+    };
 
     return (
         <div className="App">
             <Header
                 onShowProductList={handleShowProductList}
                 onShowNosotros={handleShowNosotros}
+                onShowHome = {handleGoHome}
             />
-            {content}
+            {renderContent()}
             <Footer
                 onShowTerms={handleShowTerms}
                 onShowCookiesPolicy={handleShowCookiesPolicy}
                 onShowPrivacyPolicy={handleShowPrivacyPolicy}
             />
             <button onClick={handleGoHome} className="home-icon">
-                <FaHome/>
+                <FaHome />
             </button>
         </div>
     );
