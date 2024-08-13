@@ -1,0 +1,46 @@
+.filtros {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filtros h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.filtros label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filtros input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.filtros .rango-precio {
+    margin: 10px 0;
+}
+
+.filtros .rango-precio input[type="range"] {
+    width: 100%;
+}
+
+.filtros .filtro-boton {
+    background-color: #f9a825;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.filtros .filtro-boton:hover {
+    background-color: #e68900;
+}

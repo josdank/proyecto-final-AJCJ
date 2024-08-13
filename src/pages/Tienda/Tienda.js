@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ListaProductos from './ListaProductos';
 import Carrito from './Carrito';
-import ProductDetail from '../Detalles/detalle_productos'; // Verificar la ruta
+import Filtros from './Filtros';
+import NavegacionCategorias from './NavegacionCategorias';
 import '../../App.css';
 
 class Tienda extends Component {
@@ -9,11 +10,16 @@ class Tienda extends Component {
         super(props);
         this.state = {
             itemsCarrito: [],
+            categoriaSeleccionada: 'Pasteles',
+            filtroPrecio: { min: 0, max: 50 },
+            filtroDisponibilidad: 'all',
             visible: false,
-            detalleVisible: false,
-            productoSeleccionado: null
         };
     }
+
+    cambiarCategoria = (categoria) => {
+        this.setState({ categoriaSeleccionada: categoria });
+    };
 
     agregarAlCarrito = (producto) => {
         this.setState((prevState) => ({
@@ -37,7 +43,7 @@ class Tienda extends Component {
 
     handleCheckout = (total) => {
         alert(`Gracias por tu compra. El total a pagar es: $${total.toFixed(2)}`);
-        this.setState({ itemsCarrito: [] }); // Limpiar el carrito después del checkout
+        this.setState({ itemsCarrito: [] });
     };
 
     toggleCarritoVisibility = () => {
@@ -46,46 +52,35 @@ class Tienda extends Component {
         }));
     };
 
-    showProductDetails = (producto) => {
+    aplicarFiltros = (precio, disponibilidad) => {
         this.setState({
-            detalleVisible: true,
-            productoSeleccionado: producto
-        });
-    };
-
-    hideProductDetails = () => {
-        this.setState({
-            detalleVisible: false,
-            productoSeleccionado: null
+            filtroPrecio: precio,
+            filtroDisponibilidad: disponibilidad
         });
     };
 
     render() {
-        const { itemsCarrito, visible, detalleVisible, productoSeleccionado } = this.state;
+        const { itemsCarrito, visible, categoriaSeleccionada, filtroPrecio, filtroDisponibilidad } = this.state;
 
         return (
             <div className="tienda">
-                <h1>Tienda</h1>
-                {detalleVisible && productoSeleccionado ? (
-                    <div>
-                        <button onClick={this.hideProductDetails}>Volver a la tienda</button>
-                        <ProductDetail />
-                    </div>
-                ) : (
-                    <div>
-                        <ListaProductos
-                            agregarAlCarrito={this.agregarAlCarrito}
-                            showProductDetails={this.showProductDetails}
-                        />
-                        <Carrito
-                            itemsCarrito={itemsCarrito}
-                            eliminarDelCarrito={this.eliminarDelCarrito}
-                            onCheckout={this.handleCheckout}
-                            visible={visible}
-                            setVisible={this.toggleCarritoVisibility}
-                        />
-                    </div>
-                )}
+                <NavegacionCategorias cambiarCategoria={this.cambiarCategoria} />
+                <div className="contenedor-principal">
+                    <Filtros aplicarFiltros={this.aplicarFiltros} />
+                    <ListaProductos
+                        categoria={categoriaSeleccionada}
+                        agregarAlCarrito={this.agregarAlCarrito}
+                        filtroPrecio={filtroPrecio}
+                        filtroDisponibilidad={filtroDisponibilidad}
+                    />
+                </div>
+                <Carrito
+                    itemsCarrito={itemsCarrito}
+                    eliminarDelCarrito={this.eliminarDelCarrito}
+                    onCheckout={this.handleCheckout}
+                    visible={visible}
+                    setVisible={this.toggleCarritoVisibility}
+                />
             </div>
         );
     }

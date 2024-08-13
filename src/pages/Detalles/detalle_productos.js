@@ -5,6 +5,11 @@ import './Productos.css';
 import Pastel1 from '../../assets/img/recetas_de_tartas_para_perros_diy_22348_orig.jpg';
 import Pastel2 from '../../assets/img/Tarta-para-perros-1.jpeg';
 import Pastel3 from '../../assets/img/tartas-para-perros-1-XxXx80.jpg';
+import Empanadas from '../../assets/img/Empanadas.jpg';
+import pastelitos from "../../assets/img/pastelitos.jpg";
+import minipastel from "../../assets/img/mini-pastel.jpg";
+import pastelillos from "../../assets/img/pastelillos.jpg";
+import Galletas from "../../assets/img/galletas.jpg";
 
 const DetalleProductos = () => {
     const [quantity, setQuantity] = useState(1);
@@ -42,10 +47,18 @@ const DetalleProductos = () => {
     };
 
     const relatedProducts = [
-        { src: "https://t2.ea.ltmcdn.com/es/posts/8/4/3/recetas_de_tartas_para_perros_diy_22348_orig.jpg", name: "Mini-Pastel", price: "$1.00 c/u" },
-        { src: "https://www.zooplus.es/magazine/wp-content/uploads/2021/11/Tarta-para-perros-1.jpeg", name: "Galletas", price: "$1.00 c/u" },
-        { src: "https://www.hogarmania.com/archivos/202401/tartas-para-perros-1-XxXx80.jpg", name: "Pastelitos", price: "$1.00 c/u" },
-        { src: "https://truffle-assets.tastemadecontent.net/b20145d5-torta-perros_1920x1080.png", name: "Galletas", price: "$1.00 c/u" }
+        { src: (pastelillos), name: 'Mini-Pastel', price: '$3.00 c/u' },
+        { src: (Galletas), name: 'Galletas', price: '$1.00 c/u' },
+        { src: (pastelitos), name: 'Pastelillos', price: '$2.00 c/u' },
+        { src: (minipastel), name: 'Pastel', price: '$4.00 c/u' },
+        { src: (Empanadas), name: 'Empanadas', price: '$1.00 c/u' },
+        { src: 'https://th.bing.com/th/id/OIP.AnicgOYgz1Jiw5FP4q_d0QHaHa?rs=1&pid=ImgDetMain', name: 'Helados', price: '$0.75 c/u' },
+        { src: 'https://m.media-amazon.com/images/I/71MPZzuUrLL._SX569_.jpg', name: 'Tortillas', price: '$2.00 c/u' },
+        { src: 'https://th.bing.com/th/id/OIP.yvC7Ib7yVOVBiozThlFSHAAAAA?w=474&h=316&rs=1&pid=ImgDetMain', name: 'Huesitos', price: '$1.25 c/u' },
+        { src: 'https://th.bing.com/th/id/R.c355db2a4ef84c23dc9531ed99f0b662?rik=8b3T2V%2fa0J2c6A&riu=http%3a%2f%2fwww.polacocina.com%2fwp-content%2fuploads%2f2018%2f11%2fIMG_1393-thegem-blog-timeline-large.jpg&ehk=8Sk8gj4uBICZusetPXVkpTfxJ5v26JD3KoLi4%2f33XbU%3d&risl=&pid=ImgRaw&r=0g', name: 'Premios', price: '$1.75 c/u' },
+        { src: 'https://th.bing.com/th/id/OIP.9swjVepit8_3XjuhZN65VQHaHa?w=219&h=219&c=7&r=0&o=5&pid=1.7', name: 'Pedigree', price: '$2.50 c/u' },
+        { src: 'https://m.media-amazon.com/images/I/71ADhDMXfSL._AC_SL1500_.jpg', name: 'Welness', price: '$3.00 c/u' },
+        { src: 'https://th.bing.com/th/id/OIP.drFfi0R2L7di_VlAPdIUgwHaHa?rs=1&pid=ImgDetMain', name: 'Wiskas', price: '$1.60 c/u' }
     ];
 
     const responsive = {

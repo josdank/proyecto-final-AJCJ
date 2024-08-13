@@ -4,6 +4,7 @@ import Logo from '../../assets/img/logoDoggift.png'
 import Icono from '../../assets/img/iconoDoggift.png'
 import HamburguesaMenu from '../../assets/img/hamburguesaMenu.png'
 
+
 const Header = ({ onShowProductList, onShowNosotros }) => {
     const [scrolled, setHasScrolled] = useState(false);
     const apply = 400; // Valor de scroll para aplicar la clase
@@ -38,7 +39,7 @@ const Header = ({ onShowProductList, onShowNosotros }) => {
             opcionesRef.current.classList.toggle('desplegable');
         }
     };
-    
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (opcionesRef.current && !opcionesRef.current.contains(event.target)) {
@@ -96,7 +97,7 @@ const Header = ({ onShowProductList, onShowNosotros }) => {
                             <div className='header__navbar--busqueda--lupa'>
                                 <a class="fa-solid fa-magnifying-glass" id='lupaNavbar'></a>
                                 <div className='linea'></div>
-                            
+
                                 <a class="fa-solid fa-cart-shopping" id='carritoNavbar'></a>
                                 <div className='linea'></div>
                                 <div className='cantidades'>

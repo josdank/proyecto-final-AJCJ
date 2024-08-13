@@ -8,7 +8,8 @@ import Footer from "./components/Footer/Footer";
 import Mascotas from './pages/CuidadoMascotas/Mascotas';
 import DetalleProductos from './pages/Detalles/detalle_productos';
 import Comida from './pages/ComidaDoggift/comida';
-import { FaHome } from 'react-icons/fa'; // Importamos el icono de la casita
+import { FaHome } from 'react-icons/fa';
+import Carrito from "./pages/Tienda/Carrito"; // Importamos el icono de la casita
 
 const App = () => {
     const [view, setView] = useState('nosotros');
@@ -58,9 +59,9 @@ const App = () => {
         <div className="App">
             <Header onShowProductList={handleShowProductList} onShowNosotros={handleShowNosotros} />
             {content}
-            <Mascotas />
             <DetalleProductos />
             <Comida/>
+            <Tienda/>
             <Footer />
 
             {/* Icono de casita */}

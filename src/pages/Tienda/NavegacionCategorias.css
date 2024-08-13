@@ -1,0 +1,81 @@
+/* Estilos generales para la navegación de categorías */
+.navegacion-categorias {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 111, 97, 0.3);
+    background-image: url('../../assets/img/FondoTienda.png');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+/* Estilos para la lista de categorías */
+.navegacion-categorias ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para los ítems de la lista */
+.navegacion-categorias li {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    padding: 5px 90px;
+}
+
+.navegacion-categorias li svg {
+    margin-right: 8px;
+}
+
+.navegacion-categorias li:hover {
+    color: #f9a825;
+}
+
+/* Estilos para pantallas de tabletas */
+@media (max-width: 1024px) {
+    .navegacion-categorias {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navegacion-categorias ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navegacion-categorias li {
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+}
+
+/* Estilos para pantallas de móviles */
+@media (max-width: 768px) {
+    .navegacion-categorias {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navegacion-categorias ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navegacion-categorias li {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}

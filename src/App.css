@@ -159,3 +159,142 @@ button:hover {
 .home-icon:hover {
   background-color: #e0e0e0;
 }
+
+.tienda {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.navegacion-categorias {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(119, 62, 10, 0.44);
+  background-image: url('./assets/img/FondoTienda.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  height: 250px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navegacion-categorias ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navegacion-categorias li {
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navegacion-categorias li:hover {
+  color: #f9a825;
+}
+
+.contenedor-principal {
+  display: flex;
+  padding: 20px;
+}
+
+.filtros {
+  width: 20%;
+  padding: 10px;
+}
+
+.lista-productos {
+  width: 80%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.carrito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.carrito.visible {
+  display: block;
+}
+
+/* Estilos para pantallas de tabletas */
+@media (max-width: 1024px) {
+  .navegacion-categorias {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navegacion-categorias ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navegacion-categorias li {
+    font-size: 16px;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  .filtros {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .lista-productos {
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilos para pantallas de móviles */
+@media (max-width: 768px) {
+  .navegacion-categorias {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navegacion-categorias ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navegacion-categorias li {
+    font-size: 14px;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  .filtros {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .lista-productos {
+    width: 50%;
+    grid-template-columns: 1fr;
+  }
+
+  .carrito {
+    width: 100%;
+    position: static;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+}
