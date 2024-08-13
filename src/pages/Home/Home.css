@@ -4,14 +4,12 @@
 }
 
 .home-header {
-  background: url('/images/1.jpg') no-repeat center center;
+  background: url('https://th.bing.com/th/id/OIP.CjJXuzT1vxUJmPnFXL654gHaGD?w=215&h=180&c=7&r=0&o=5&pid=1.7') no-repeat center center;
   background-size: cover;
   padding: 100px 20px;
   text-align: center;
   color: white;
 }
-
-
 
 .header-content {
   max-width: 800px;

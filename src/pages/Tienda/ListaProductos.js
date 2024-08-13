@@ -40,7 +40,6 @@ const ListaProductos = ({ categoria, agregarAlCarrito, verDetalles, filtroPrecio
                     key={producto.id}
                     producto={producto}
                     agregarAlCarrito={agregarAlCarrito}
-                    verDetalles={verDetalles} // Pasar la función verDetalles
                 />
             ))}
         </div>

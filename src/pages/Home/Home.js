@@ -121,10 +121,10 @@ const Home = () => {
         <h2 style={sectionTitleStyle}>Comida Saludable</h2>
         <p>Una alternativa a las croquetas y premios saludables para mascotas.</p>
         <div style={gridStyle}>
-          <img src="assets/img/1.jpg" alt="Imagen 1" style={smallImageStyle} />
-          <img src="/images/2.jpg" alt="Imagen 2" style={smallImageStyle} />
-          <img src="/images/3.jpg" alt="Imagen 3" style={smallImageStyle} />
-          <img src="/images/4.jpg" alt="Imagen 4" style={smallImageStyle} />
+          <img src="https://th.bing.com/th/id/OIP.CjJXuzT1vxUJmPnFXL654gHaGD?w=215&h=180&c=7&r=0&o=5&pid=1.7" alt="Imagen 1" style={smallImageStyle} />
+          <img src="https://th.bing.com/th/id/R.b182fdfafd58f8f2e40cc927241cd6f3?rik=vuF0%2f0hfijbAHw&pid=ImgRaw&r=0" alt="Imagen 2" style={smallImageStyle} />
+          <img src="https://i.pinimg.com/originals/8f/48/bd/8f48bde317872556079ce8f539eb444f.jpg" alt="Imagen 3" style={smallImageStyle} />
+          <img src="https://th.bing.com/th/id/OIP.YUEQrS7KX2od-wXV_ovfigHaEz?w=264&h=180&c=7&r=0&o=5&pid=1.7" alt="Imagen 4" style={smallImageStyle} />
         </div>
       </section>
 
