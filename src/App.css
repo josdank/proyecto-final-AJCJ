@@ -83,20 +83,6 @@ button:hover {
 }
 
 /* Estilos básicos para el ícono del carrito y el carrito desplegado */
-.icono-carrito {
-  position: Fixed;
-  top: 90px;
-  right: 10px;
-  font-size: 2rem;
-  cursor: pointer;
-  background-color: orange;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .contador {
   position: absolute;
@@ -157,6 +143,23 @@ button:hover {
 }
 
 .home-icon:hover {
+  background-color: #e0e0e0;
+}
+.mad-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: rgba(253, 180, 159, 0.7);
+  border: none;
+  border-radius: 30%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(136, 48, 48, 0.2);
+  z-index: 10003;
+  font-size: 20px;
+}
+
+.mad-icon:hover {
   background-color: #e0e0e0;
 }
 

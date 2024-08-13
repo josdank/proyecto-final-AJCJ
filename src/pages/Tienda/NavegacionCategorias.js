@@ -26,7 +26,7 @@ const NavegacionCategorias = ({ cambiarCategoria }) => {
                         Enlatados
                     </li>
                     <li>
-                        <Link to="/detalle_productos">
+                        <Link to="/detalles">
                             <FontAwesomeIcon icon={faBox} />
                             Detalles Producto
                         </Link>

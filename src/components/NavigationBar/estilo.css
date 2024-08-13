@@ -90,12 +90,12 @@ a {
   column-gap: 15px;
   margin: auto;
   align-items: center;
-  
+
 }
 
 .header__navbar--opciones i {
   margin: auto;
-  
+
 }
 
 .header__navbar--opciones a {
@@ -107,7 +107,7 @@ a {
 .header__navbar--opciones .header__navbar--opciones--nombre {
   font-size: 12px;
   font-weight: 600;
-  margin-left: 1px; 
+  margin-left: 1px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -122,7 +122,7 @@ a {
   display: flex;
   flex-direction: row;
 
-  
+
 
   align-items: center;
 
@@ -145,14 +145,14 @@ a {
 }
 
 .linea {
-  width: 1px; 
-  height: 41px; 
+  width: 1px;
+  height: 41px;
   background: radial-gradient(circle, black, white);
-  margin: 20px auto; 
+  margin: 20px auto;
 }
 .lineaHamburguesa {
-  width: 1px; 
-  height: 41px; 
+  width: 1px;
+  height: 41px;
   background: radial-gradient(circle, black, white);
   margin: 20px auto;
   display: none;
@@ -209,22 +209,22 @@ a {
   .desplegable {
     display: flex;
     flex-direction: column;
-    
+
     row-gap: 20px;
-  
+
     background-color:  rgb(245, 245, 245);
-  
+
     position: fixed;
-  
+
     inset: 0 0 0 70%;
-  
+
     z-index: 999;
   }
 
   .navbar {
     margin: auto;
   }
-  
+
   .homeA {
     margin-top: 20px;
   }
@@ -237,7 +237,7 @@ a {
     display: block;
 
     width: 30px;
-    
+
     margin: 0px 10px;
   }
 
@@ -246,7 +246,7 @@ a {
     margin-left: 0px;
   }
   .cantidades {
-    
+
     margin: 0px 10px;
   }
 
@@ -264,15 +264,15 @@ a {
   .desplegable {
     display: flex;
     flex-direction: column;
-    
+
     row-gap: 20px;
-  
+
     background-color:  rgb(245, 245, 245);
-  
+
     position: fixed;
-  
+
     inset: 0 0 0 70%;
-  
+
     z-index: 999;
   }
 
@@ -320,7 +320,8 @@ a {
     display: block;
 
     width: 30px;
-    
+
     margin: 0px 10px;
   }
 }
+
