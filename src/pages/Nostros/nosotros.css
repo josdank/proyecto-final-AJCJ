@@ -1,3 +1,23 @@
+
+.NosotrosTotal {
+    position: relative;
+    z-index: 1;
+}
+
+.NosotrosTotal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/img/patronFondoNosotrs.jpeg');
+    background-size: 50%;
+    background-repeat: repeat;
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
 .nosotros {
     padding: 10px;
 
@@ -21,26 +41,25 @@
 }
 
 .quienesSomos p {
-    text-align: center;
+    text-align: left;
     margin: auto;
     max-width: 600px;
-    min-width: 400px;
+    min-width: 200px;
 }
 
-.tienda {
-    display: block;
-    margin: auto;
-    width: 500px;
+.tiendaNosotros {
+    min-width: 100px;
+    max-width: 400px;
 
     margin-top: 30px;
 }
 
 /* #2 Calidad */
-.calidad {
+.calidadNosotros {
     margin-top: 70px;
 }
 
-.calidadLogo {
+.calidadLogoNosotros {
     margin-top: 100px;
     width: 120px;
 
@@ -48,48 +67,48 @@
     margin: auto;
 }
 
-.calidad h2 {
+.calidadNosotros h2 {
     display: block;
     
     text-align: center;
 }
 
-.calidad p {
-    text-align: center;
+.calidadNosotros p {
+    text-align: left;
     
     margin: auto;
 
     max-width: 600px;
-    min-width: 400px;
+    min-width: 200px;
 }
 
 /* #3 Alimentación y salud */
-.alimentacionSalud {
+.alimentacionSaludNosotros {
     margin-top: 70px;
 }
 
-.alimentacionLogo {
+.alimentacionLogoNosotros {
     display: block;
     margin: auto;
 
     width: 220px;
 }
 
-.alimentacionSalud h2 {
+.alimentacionSaludNosotros h2 {
     display: block;
     
     text-align: center;
 }
 
-.alimentacionSalud p {
-    text-align: center;
+.alimentacionSaludNosotros p {
+    text-align: left;
 
     margin: auto;
 
     max-width: 600px;
-    min-width: 400px;
+    min-width: 200px;
 }
-.fotos {
+.fotosNosotros {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
@@ -97,9 +116,11 @@
 }
 
 .empanadas {
-    width: 300px;
+    min-width: 100px;
+    max-width: 400px;
 }
 .pastelillos {
     
-    width: 300px;
+    min-width: 100px;
+    max-width: 400px;
 }

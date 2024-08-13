@@ -1,8 +1,27 @@
 /* -------------- CABECERA -------------- */
+
+.header {
+  position: sticky;
+  top: 0;
+
+  z-index: 2;
+}
+
+
 .header__background {
   background-color: rgb(53,53,53);
   height: 16px;
   width: 100%;
+}
+
+.scrolled {
+  display: none;
+}
+
+
+.header__background,
+.head {
+    transition: opacity 0.3s ease;
 }
 
 .header {
@@ -44,7 +63,6 @@ a {
   width: 100%;
 }
 
-/* Logo */
 .navbar {
   display: flex;
   width: 70%;
@@ -55,10 +73,14 @@ a {
   align-items: stretch;
 }
 
+.bloqueDos {
+  display: block;
+}
+
 .doggiftLogo {
   width: 210px;
 
-  margin-right: 30px;
+  margin-right: auto;
 }
 
 /* Opciones del navbar */
@@ -68,7 +90,12 @@ a {
   column-gap: 15px;
   margin: auto;
   align-items: center;
-  justify-content: space-around;
+  
+}
+
+.header__navbar--opciones i {
+  margin: auto;
+  
 }
 
 .header__navbar--opciones a {
@@ -95,7 +122,7 @@ a {
   display: flex;
   flex-direction: row;
 
-  margin-left: 30px;
+  
 
   align-items: center;
 
@@ -122,6 +149,13 @@ a {
   height: 41px; 
   background: radial-gradient(circle, black, white);
   margin: 20px auto; 
+}
+.lineaHamburguesa {
+  width: 1px; 
+  height: 41px; 
+  background: radial-gradient(circle, black, white);
+  margin: 20px auto;
+  display: none;
 }
 
 .separador {
@@ -155,4 +189,138 @@ a {
   font-weight: 300;
 
   margin-left: 2px;
+}
+
+.hamburguesaMenu {
+  display: none;
+}
+
+/*Clase que se agrega cuando se da click a la hamburguesa*/
+
+/*Media queries para la hamburguesa del navbar*/
+
+@media (max-width: 950px)
+{
+  .header__navbar--opciones
+  {
+    display: none;
+  }
+
+  .desplegable {
+    display: flex;
+    flex-direction: column;
+    
+    row-gap: 20px;
+  
+    background-color:  rgb(245, 245, 245);
+  
+    position: fixed;
+  
+    inset: 0 0 0 70%;
+  
+    z-index: 999;
+  }
+
+  .navbar {
+    margin: auto;
+  }
+  
+  .homeA {
+    margin-top: 20px;
+  }
+
+  .lineaHamburguesa {
+    display: block;
+  }
+
+  .hamburguesaMenu {
+    display: block;
+
+    width: 30px;
+    
+    margin: 0px 10px;
+  }
+
+  .carrito_contador,
+  .carrito_contador_items {
+    margin-left: 0px;
+  }
+  .cantidades {
+    
+    margin: 0px 10px;
+  }
+
+  .header__navbar--busqueda {
+    margin-left: auto;
+  }
+
+  .header__navbar--busqueda--lupa {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .desplegable {
+    display: flex;
+    flex-direction: column;
+    
+    row-gap: 20px;
+  
+    background-color:  rgb(245, 245, 245);
+  
+    position: fixed;
+  
+    inset: 0 0 0 70%;
+  
+    z-index: 999;
+  }
+
+  .desplegable .homeA {
+    margin-top: 20px;
+  }
+
+  .header__navbar--opciones a {
+    row-gap: 1px;
+  }
+
+  #lupaNavbar {
+    display: none;
+  }
+  #carritoNavbar {
+    display: none;
+  }
+  .linea {
+    display: none;
+  }
+  .cantidades{
+    display: none;
+  }
+  .carrito_contador {
+    display: none;
+  }
+  .carrito_contador_items {
+    display: none;
+  }
+  .carrito_contador_itemsPalabra {
+    display: none;
+  }
+  .lineaHamburguesa {
+    display: none;
+  }
+  .hamburguesaMenu {
+    margin-left: auto;
+  }
+
+  .navbar {
+    margin: auto;
+  }
+
+  .hamburguesaMenu {
+    display: block;
+
+    width: 30px;
+    
+    margin: 0px 10px;
+  }
 }
