@@ -20,8 +20,8 @@ function Mascotas() {
       </div>
       <div className="seccion parallax">
         <div className="texto">
-          <h2>Sobre las aves...</h2>
-          <p>La alimentación de las aves debe ser variada y rica en nutrientes. Frutas como manzanas, plátanos, naranjas, melocotones y bayas son excelentes opciones, siempre y cuando se ofrezcan sin semillas. Las verduras como zanahorias, brócoli, espinacas y pimientos proporcionan vitaminas esenciales y fibra. Los granos como avena, arroz integral y quinoa también son beneficiosos y pueden complementar su dieta.</p>
+          <h2>Salud de tu nascotas...</h2>
+          <p>Las visitas regulares al veterinario son esenciales para mantener la salud de tus mascotas. Vacunas, desparasitaciones, y chequeos son necesarios para prevenir enfermedades. También es importante mantener una buena higiene, como el cepillado dental y el cuidado del pelaje.</p>
         </div>
       </div>
     </div>
