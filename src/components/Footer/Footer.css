@@ -106,3 +106,16 @@
         margin-bottom: 10px;
     }
 }
+
+.footer-section.info {
+    color: white;
+}
+
+.footer-section.info a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section.info a:hover {
+    text-decoration: underline;
+}
