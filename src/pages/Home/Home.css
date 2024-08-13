@@ -1,102 +1,102 @@
 .home-container {
-    font-family: 'Arial', sans-serif;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
 .home-header {
-    background: url('/images/1.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 100px 20px;
-    text-align: center;
-    color: white;
+  background: url('/images/1.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
 }
 
 
 
 .header-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .header-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .header-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 .shop-button {
-    background-color: #ff6600;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+  background-color: #ff6600;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .shop-button:hover {
-    background-color: #cc5200;
+  background-color: #cc5200;
 }
 
 .featured-products {
-    padding: 50px 20px;
-    text-align: center;
+  padding: 50px 20px;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .products-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .product-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
 }
 
 .product-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .product-name {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .product-price {
-    font-size: 1.1rem;
-    color: #ff6600;
+  font-size: 1.1rem;
+  color: #ff6600;
 }
 
 .about-us {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .about-description {
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .home-footer {
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
 }
