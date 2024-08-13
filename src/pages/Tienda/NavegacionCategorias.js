@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import './NavegacionCategorias.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookieBite, faHamburger, faBirthdayCake, faBox } from '@fortawesome/free-solid-svg-icons';
@@ -23,6 +24,12 @@ const NavegacionCategorias = ({ cambiarCategoria }) => {
                     <li onClick={() => cambiarCategoria('Enlatados')}>
                         <FontAwesomeIcon icon={faBox} />
                         Enlatados
+                    </li>
+                    <li>
+                        <Link to="/detalle_productos">
+                            <FontAwesomeIcon icon={faBox} />
+                            Detalles Producto
+                        </Link>
                     </li>
                 </ul>
             </nav>

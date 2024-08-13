@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Tienda from './pages/Tienda/Tienda';
 import DetalleProductos from './pages/Detalles/detalle_productos';
 import Nosotros from "./pages/Nostros/nosotros";
 import Comida from "./pages/ComidaDoggift/comida";
+import Mascotas from "./pages/CuidadoMascotas/Mascotas";
 import Header from './components/NavigationBar/Header';
 import Footer from "./components/Footer/Footer";
 import './App.css';
@@ -10,96 +12,49 @@ import Terms from './pages/Terms/Terms';
 import CookiesPolicy from './pages/CookiesPolicy/CookiesPolicy';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import { FaHome } from 'react-icons/fa';
+import Home from "./pages/Home/Home";
 
 const App = () => {
-    const [view, setView] = useState('nosotros');
     const [selectedProduct, setSelectedProduct] = useState(null);
 
     const handleProductSelect = (product) => {
         setSelectedProduct(product);
-        setView('productDetail');
     };
 
     const handleBackToStore = () => {
         setSelectedProduct(null);
-        setView('tienda');
-    };
-
-    const handleShowProductList = () => {
-        setView('tienda');
-    };
-
-    const handleShowNosotros = () => {
-        setView('nosotros');
-    };
-
-    const handleGoHome = () => {
-        setView('home');
-    };
-
-    const handleShowTerms = () => {
-        setView('terms');
-    };
-
-    const handleShowCookiesPolicy = () => {
-        setView('cookies');
-    };
-
-    const handleShowPrivacyPolicy = () => {
-        setView('privacy');
-    };
-
-    const renderContent = () => {
-        switch (view) {
-            case 'productDetail':
-                return (
-                    <div>
-                        <button onClick={handleBackToStore}>Volver a la tienda</button>
-                        <DetalleProductos product={selectedProduct} />
-                    </div>
-                );
-            case 'tienda':
-                return <Tienda onProductSelect={handleProductSelect} />;
-            case 'terms':
-                return (
-                    <div>
-                        <Terms />
-                    </div>
-                );
-            case 'cookies':
-                return (
-                    <div>
-                        <CookiesPolicy />
-                    </div>
-                );
-            case 'privacy':
-                return (
-                    <div>
-                        <PrivacyPolicy />
-                    </div>
-                );
-            default:
-                return <Nosotros />;
-        }
     };
 
     return (
-        <div className="App">
-            <Header
-                onShowProductList={handleShowProductList}
-                onShowNosotros={handleShowNosotros}
-                onShowHome = {handleGoHome}
-            />
-            {renderContent()}
-            <Footer
-                onShowTerms={handleShowTerms}
-                onShowCookiesPolicy={handleShowCookiesPolicy}
-                onShowPrivacyPolicy={handleShowPrivacyPolicy}
-            />
-            <button onClick={handleGoHome} className="home-icon">
-                <FaHome />
-            </button>
-        </div>
+        <Router>
+            <div className="App">
+                <Header
+                    onShowProductList={() => handleProductSelect(null)}
+                    onShowNosotros={() => {}}
+                    onShowHome={() => {}}
+                />
+                <Routes>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/nosotros" element={<Nosotros />} />
+                    <Route path="/tienda" element={<Tienda onProductSelect={handleProductSelect} />} />
+                    <Route path="/comida" element={<Comida />} />
+                    <Route path="/mascotas" element={<Mascotas />} />
+                    <Route path="/detalle/:id" element={<DetalleProductos />} />
+                    <Route path="/detalle_productos" component={DetalleProductos} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/cookies" element={<CookiesPolicy />} />
+                    <Route path="/privacy" element={<PrivacyPolicy />} />
+                </Routes>
+                <Footer
+                    onShowTerms={() => {}}
+                    onShowCookiesPolicy={() => {}}
+                    onShowPrivacyPolicy={() => {}}
+                />
+                <button onClick={() => window.location.href = '/home'} className="home-icon">
+                    <FaHome />
+                </button>
+            </div>
+        </Router>
     );
 }
 

@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import img1 from '../../assets/img/1.jpg';
+import img2 from "../../assets/img/1.png";
+import img3 from "../../assets/img/3.jpg";
+import img4 from "../../assets/img/4.jpg";
+import Galletas from "../../assets/img/galletas.jpg";
+
 
 const Home = () => {
   const headerStyle = {
@@ -115,7 +121,7 @@ const Home = () => {
         <h2 style={sectionTitleStyle}>Comida Saludable</h2>
         <p>Una alternativa a las croquetas y premios saludables para mascotas.</p>
         <div style={gridStyle}>
-          <img src="/images/1.jpg" alt="Imagen 1" style={smallImageStyle} />
+          <img src="assets/img/1.jpg" alt="Imagen 1" style={smallImageStyle} />
           <img src="/images/2.jpg" alt="Imagen 2" style={smallImageStyle} />
           <img src="/images/3.jpg" alt="Imagen 3" style={smallImageStyle} />
           <img src="/images/4.jpg" alt="Imagen 4" style={smallImageStyle} />

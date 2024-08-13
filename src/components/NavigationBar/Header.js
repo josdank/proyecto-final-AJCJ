@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './estilo.css';
 import Logo from '../../assets/img/logoDoggift.png';
 import Icono from '../../assets/img/iconoDoggift.png';
 import HamburguesaMenu from '../../assets/img/hamburguesaMenu.png';
 
-const Header = ({ onShowView, onSearch, cart = [] }) => {
+const Header = ({ onShowProductList, onShowNosotros, onShowHome, cart = [], onSearch }) => {
     const [scrolled, setHasScrolled] = useState(false);
     const [searchInput, setSearchInput] = useState('');
     const apply = 400;
@@ -60,13 +61,6 @@ const Header = ({ onShowView, onSearch, cart = [] }) => {
         }
     };
 
-    const handleNavigation = (view) => (e) => {
-        e.preventDefault();
-        if (onShowView) {
-            onShowView(view);
-        }
-    };
-
     return (
         <header className='header'>
             <div className={`header__background ${scrolled ? 'scrolled' : ''}`}>
@@ -80,30 +74,30 @@ const Header = ({ onShowView, onSearch, cart = [] }) => {
 
             <div className='header__navbar'>
                 <div className='navbar'>
-                    <a href='#' className='logo' onClick={handleNavigation('home')}>
+                    <Link to="/" className='logo' onClick={onShowHome}>
                         <img src={Logo} alt="Logo" className='doggiftLogo' />
-                    </a>
+                    </Link>
                     <div ref={opcionesRef} className='header__navbar--opciones'>
-                        <a href="#" onClick={handleNavigation('Home')}>
+                        <Link to="/home" onClick={onShowHome}>
                             <i className="fa-solid fa-house"></i>
                             <span className='header__navbar--opciones--nombre'>HOME</span>
-                        </a>
-                        <a href="#" onClick={handleNavigation('tienda')}>
+                        </Link>
+                        <Link to="/tienda" onClick={onShowProductList}>
                             <i className="fa-solid fa-shop"></i>
                             <span className='header__navbar--opciones--nombre'>TIENDA</span>
-                        </a>
-                        <a href="#" onClick={handleNavigation('mascotas')}>
-                            <i className="fa-solid fa-dog"></i>
-                            <span className='header__navbar--opciones--nombre'>CUIDADO MASCOTAS</span>
-                        </a>
-                        <a href="#" onClick={handleNavigation('comida')}>
+                        </Link>
+                        <Link to="/comida">
                             <i className="fa-solid fa-bone"></i>
                             <span className='header__navbar--opciones--nombre'>COMIDA DOGGIFT</span>
-                        </a>
-                        <a href="#" onClick={handleNavigation('nosotros')}>
+                        </Link>
+                        <Link to="/mascotas">
+                            <i className="fa-solid fa-dog"></i>
+                            <span className='header__navbar--opciones--nombre'>CUIDADO MASCOTAS</span>
+                        </Link>
+                        <Link to="/nosotros">
                             <img src={Icono} alt='Icono' className='doggiftIcono' />
                             <span className='header__navbar--opciones--nombre'>NOSOTROS</span>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className='header__navbar--busqueda'>
@@ -116,23 +110,13 @@ const Header = ({ onShowView, onSearch, cart = [] }) => {
                                     placeholder="Buscar..."
                                     className='search-input'
                                 />
-                                <a className="fa-solid fa-magnifying-glass" id='lupaNavbar' onClick={handleSearchSubmit}></a>
+                                <button className="fa-solid fa-magnifying-glass" id='lupaNavbar' onClick={handleSearchSubmit}></button>
                                 <div className='linea'></div>
-                                <a className="fa-solid fa-cart-shopping" id='carritoNavbar' onClick={handleNavigation('carrito')}></a>
-                                <div className='linea'></div>
-                                <div className='cantidades'>
-                                    <div className='carrito_contador'>
-                                        {cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}
-                                    </div>
-                                    <div className='carrito_contador_items'>
-                                        {cart.reduce((total, item) => total + item.quantity, 0)}
-                                    </div>
-                                    <div className='carrito_contador_itemsPalabra'>items</div>
-                                </div>
+                                <Link to="/carrito">
+                                    <button className="fa-solid fa-cart-shopping" id='carritoNavbar'></button>
+                                </Link>
                                 <div className='lineaHamburguesa'></div>
-                                <a href="#" id='hamburguesaNavbar' onClick={handleClick}>
-                                    <img src={HamburguesaMenu} className='hamburguesaMenu' alt="Menú" />
-                                </a>
+
                             </div>
                         </div>
                     </div>
