@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import estilosIngreso from "./estilosIngreso.css";
 
 function Ingreso() {
   const [email, setEmail] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [error, setError] = useState(false);
+  const inputRef = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,6 +18,19 @@ function Ingreso() {
     }
   };
 
+  const handleClickOutside = (event) => {
+    if (inputRef.current && !inputRef.current.contains(event.target)) {
+      setError(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <form onSubmit={handleSubmit} className="formulario">
       <h1 className="tituloFormulario">Información de contacto</h1>
@@ -25,7 +39,7 @@ function Ingreso() {
           htmlFor="email"
           className={`formularioLabel ${error ? "errorLabel" : ""}`}
         >
-          Correo electrónico <br></br>
+          Correo electrónico <br />
         </label>
         <input
           type="email"
@@ -34,6 +48,7 @@ function Ingreso() {
           onChange={(e) => setEmail(e.target.value)}
           required
           className={`inputFormulario ${error ? "errorInput" : ""}`}
+          ref={inputRef}
         />
       </div>
       <div>
