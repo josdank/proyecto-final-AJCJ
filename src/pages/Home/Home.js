@@ -5,7 +5,7 @@ import img2 from "../../assets/img/1.png";
 import img3 from "../../assets/img/3.jpg";
 import img4 from "../../assets/img/4.jpg";
 import Galletas from "../../assets/img/galletas.jpg";
-
+import Ingreso from '../../components/Ingreso/Ingreso'
 
 const Home = () => {
   const headerStyle = {
@@ -148,6 +148,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Ingreso></Ingreso>
 
       <section style={sectionStyle}>
         <h2 style={sectionTitleStyle}>Amor Mascotas</h2>

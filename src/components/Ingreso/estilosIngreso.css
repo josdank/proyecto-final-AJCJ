@@ -1,0 +1,60 @@
+.formulario {
+    position: relative;
+    z-index: 1;
+}
+
+.formulario::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/img/patronFondoNosotrs.jpeg');
+    background-size: 50%;
+    background-repeat: repeat;
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.inputFormulario {
+    min-width: 20%;
+    max-width: 50%;
+    margin-top: 7px;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
+  .label {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .formularioLabel {
+    font-size: 17px;
+  }
+  
+  .formularioTerminos {
+    font-size: 10px;
+  }
+  
+  .formularioEnviar {
+    border-radius: 5px;
+    border: transparent;
+    background-color: orange;
+    transition: 0.3s;
+  }
+  
+  .formularioEnviar:hover {
+    border-radius: 5px;
+    border: transparent;
+    background-color: rgb(255, 165, 0, 0.8);
+  }
+  
+  /* Estilos para mostrar el error */
+  .errorInput {
+    border: 2px solid red;
+  }
+  
+  .errorLabel {
+    color: red;
+  }
+  
